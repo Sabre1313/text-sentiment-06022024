@@ -8,7 +8,7 @@ def index():
 
 @app.route("/result",methods=["GET","POST"])
 def result():
-   t = request.form.get("t")
+    t = request.form.get("t")
     result = TextBlob(t).sentiment
     return(render_template("result.html",result=result)
 
